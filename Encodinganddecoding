@@ -1,0 +1,22 @@
+def encodeString(stringVal):
+    prevChar = stringVal[0]
+    encodedList = []
+    count=0;
+    
+    for char in stringVal:
+        if prevChar != char:
+             encodedList.append((prevChar, count))
+             count=0
+        prevChar=char
+        count=count+1
+        
+    encodedList.append((prevChar, count)) 
+    return encodedList
+encodeString('AABBCRCA')
+
+def decodeString(encodedList):
+    decodedString=''
+    for char in encodedList:
+        decodedString= decodedString+char[0]*char[1]
+    return decodedString 
+decodeString[('W',5),('A',2)]
